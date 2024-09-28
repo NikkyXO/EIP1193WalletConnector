@@ -42,6 +42,7 @@ export const useWalletConnection = () => {
   const getBalance = useCallback(async (address: string) => {
     if (typeof window.ethereum !== 'undefined') {
       try {
+        console.log({address});
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const balance = await provider.getBalance(address);
         setBalance(ethers.utils.formatEther(balance));
