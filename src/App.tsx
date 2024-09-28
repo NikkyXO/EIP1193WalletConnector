@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useState } from "react";
 import { useWalletConnection } from "./components/useWalletConnection";
 
@@ -33,6 +32,7 @@ const App: React.FC = () => {
     <div className="w-full h-screen mx-auto  bg-cyan-500">
       <div className="p-5  flex flex-col justify-center items-center">
         <h1 className="text-3xl font-extrabold p-5 mt-10">Wallet Connection </h1>
+        
         {isConnected ? (
           <div className="flex flex-col gap-3 items-center justify-center ">
             <p className="text-2xl">Connected Account:</p>

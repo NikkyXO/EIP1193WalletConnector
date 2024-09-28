@@ -17,7 +17,7 @@ export const useWalletConnection = () => {
         const ethereum = window.ethereum;
         await ethereum.request({ method: 'eth_requestAccounts' });
         const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = await provider.getSigner();
+        const signer =  provider.getSigner();
         const address = await signer.getAddress();
         const network = await provider.getNetwork();
         
