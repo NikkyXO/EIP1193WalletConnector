@@ -1,6 +1,3 @@
-
-
-// useWalletConnection.ts
 import { useState, useEffect, useCallback } from 'react';
 import { ethers } from 'ethers';
 
@@ -97,4 +94,5 @@ export const useWalletConnection = () => {
 // @metamask/sdk-react
 // reference: https://docs.metamask.io/wallet/how-to/use-sdk/javascript/react/
 // https://docs.reown.com/
+// https://docs.metamask.io/wallet/how-to/use-sdk/javascript/react/
 // react-ui
