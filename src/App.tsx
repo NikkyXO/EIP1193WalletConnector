@@ -1,16 +1,15 @@
-import React, { useState } from "react";
-import { useWalletConnection } from "./components/useWalletConnection";
+import React, { useContext, useState } from "react";
+// import { useWalletConnection } from "./components/useWalletConnection";
+import { WalletInitContext } from "./contexts/walletSetupContext";
 
 const App: React.FC = () => {
-  const {
-    connect,
+  const { connect,
     disconnect,
     account,
     chainId,
     balance,
     isConnected,
-    getBalance,
-  } = useWalletConnection();
+    getBalance,}  = useContext(WalletInitContext);
 
   const [addressInput, setAddressInput] = useState("");
 

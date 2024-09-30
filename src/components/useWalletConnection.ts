@@ -43,6 +43,9 @@ export const useWalletConnection = () => {
     if (typeof window.ethereum !== 'undefined') {
       try {
         console.log({address});
+        if(!ethers.utils.isAddress(address)) {
+          alert("Please enter valid address");
+        }
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const balance = await provider.getBalance(address);
         setBalance(ethers.utils.formatEther(balance));
@@ -89,3 +92,9 @@ export const useWalletConnection = () => {
     getBalance
   };
 };
+
+// metamask react sdk
+// @metamask/sdk-react
+// reference: https://docs.metamask.io/wallet/how-to/use-sdk/javascript/react/
+// https://docs.reown.com/
+// react-ui
