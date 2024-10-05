@@ -11,3 +11,17 @@ interface EthereumProvider {
   interface Window {
     ethereum?: EthereumProvider;
   }
+
+  interface ImportMetaEnv {
+    readonly VITE_APPKIT_PROJECT_ID: string;
+    readonly VITE_LISK_SEPOLIA_EXPLORER_URL: string;
+    readonly VITE_LISK_SEPOLIA_RPC_URL: string;
+    readonly VITE_CONTRACT_ADDRESS: string;
+
+    // add other environment variables here as needed
+  }
+  
+  interface ImportMeta {
+    readonly env: ImportMetaEnv;
+  }
+

@@ -1,13 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { WalletSetupContextProvider } from './contexts/walletSetupContext.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import { Theme } from "@radix-ui/themes";
+import "./index.css";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <WalletSetupContextProvider>
-    <App />
-    </WalletSetupContextProvider>
-  </StrictMode>,
-)
+    <Theme>
+      <App />
+    </Theme>
+  </StrictMode>
+);
